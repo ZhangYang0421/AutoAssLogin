@@ -1,0 +1,25 @@
+# ============================================================
+# AutoFreeLogin 配置文件（示例）
+# 复制此文件为 config.yaml 并填入真实值
+# ============================================================
+
+# 邮箱 API 配置（用于接收验证码）
+email_api:
+  base_url: "http://your-mail-api.com/api/open/email/latest"
+  api_key: "YOUR_API_KEY"
+  pt: "YOUR_PT_TOKEN"
+  poll_interval: 5
+  poll_timeout: 120
+
+# 登录配置
+login:
+  max_concurrent: 3
+  retry_count: 2
+  retry_delay: 10
+
+# HTTP 代理（留空则不使用代理）
+proxy: "http://127.0.0.1:7890"
+
+# 输出配置
+output:
+  tokens_dir: "./tokens"
